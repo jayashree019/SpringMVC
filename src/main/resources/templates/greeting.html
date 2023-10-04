@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Greeting!!</title>
+</head>
+<body>
+<form action="#"method="post"th:action="@{/greeting}"th:object="${greeting1}">
+    <div class="form-group">
+        <label for="exampleInputEmail1">id</label>
+        <input type="text"th:field="*{id}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">message</label>
+        <input type="text" th:field="*{message}" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="reset" class="btn btn-primary">Reset</button>
+</form>
+</body>
+</html>
