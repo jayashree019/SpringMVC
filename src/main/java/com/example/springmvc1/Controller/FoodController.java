@@ -17,13 +17,11 @@ public class FoodController {
 
     @GetMapping("/food")
     public String getFood(Model model){
-       Food[] foods={new Food("Pizza",500.00),
-       new Food("Dragon Fruit",400.00),
-       new Food("ColdCoffee",150.00)
-       };
+       Food[] foods= foodService.getFoods();
       model.addAttribute("foods",foods);
 
         return "food";
     }
+
 
 }
